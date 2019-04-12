@@ -60,8 +60,8 @@ object Decoders {
   /* The rest have short names which we want to rename, or arrives as a tuple */
 
   implicit lazy val OrderBookEntryDecoder: Decoder[OrderBookEntry] =
-    Decoder.decodeTuple3[Price, Quantity, Seq[String]].map {
-      case (a0, a1, _) => OrderBookEntry(a0, a1)
+    Decoder.decodeTuple2[Price, Quantity].map {
+      case (a0, a1) => OrderBookEntry(a0, a1)
     }
 
   implicit lazy val AccountUpdateEventDecoder: Decoder[AccountUpdateEvent] = {
