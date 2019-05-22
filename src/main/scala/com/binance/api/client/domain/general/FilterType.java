@@ -13,6 +13,7 @@ public enum FilterType {
   MAX_ALGO_ORDERS,
   MAX_NUM_ALGO_ORDERS,
   ICEBERG_PARTS,
+  MARKET_LOT_SIZE,
 
   // Exchange
   EXCHANGE_MAX_NUM_ORDERS,
